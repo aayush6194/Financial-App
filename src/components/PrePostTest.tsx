@@ -21,7 +21,8 @@ const Div = styled.div`
     padding: 15px;
 `;
 
-const SimulationIntro: string = 'Simulation Introduction'; 
+const SimIntro: string = 'Simulation Introduction'; 
+const CompleteSim: string = 'Simulation Complete';
 
 const PrePostTest = ({stage, setStage}: any)=> {
     const [begin, setBegin] = useState(false);
@@ -33,11 +34,12 @@ const PrePostTest = ({stage, setStage}: any)=> {
             /** Load with SimInt if stage is "pretest" */
             stage === 'pretest'?
                 <GridRow rows="2">
-                    <Card>{SimulationIntro}</Card>
+                    <Card>{SimIntro}</Card>
                     <NavButton onClick={(e) => setBegin(true)}>BEGIN {stage.toUpperCase()}</NavButton>
                 </GridRow>
             :
                 <GridRow rows="2">
+                    <Card>{CompleteSim}</Card>
                     <NavButton onClick={(e) => setBegin(true)}>BEGIN {stage.toUpperCase()}</NavButton>
                 </GridRow>
         :

@@ -40,15 +40,19 @@ const OptionButton = styled.button`
   &:hover {
     cursor: pointer;
     color: #f8b332;
+    box-shadow: 4px 4px 2px #b5b5b5;
     border-color: #f8b332;
+    font-size: 104%;
   }
 
   &:disabled {
     color: #1f3d7d;
     border: 2px solid #1f3d7d;
+    box-shadow: 2px 2px 4px #adadad;
     font-weight: bold;
     &:hover {
       cursor: default;
+      box-shadow: 4px 4px 2px #b5b5b5;
     }
   }
 `;
@@ -64,15 +68,12 @@ const NavButton = styled.button`
   font-weight: bold;
 
   &:focus {
-    background-color: white;
-    color: #f8b332;
-    border-color: #f8b332;
+    background-color: #7da2d6;
   }
 
   &:hover {
     cursor: pointer;
-    color: #f8b332;
-    border-color: #f8b332;
+    font-size: 108%;
   }
 
   &:disabled {
@@ -80,6 +81,9 @@ const NavButton = styled.button`
     color: #7da2d6;
     border-color: #7da2d6;
     cursor: not-allowed;
+    &:hover {
+    font-size: 100%;
+    }
   }
 `;
 
