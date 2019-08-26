@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Card } from "./styled";
 
 const Container = styled.div`
     min-width: 50%;
@@ -87,4 +88,40 @@ const NavButton = styled.button`
   }
 `;
 
-export { OptionButton, NumberStr, QuestionStr, NavButton, Container }
+const QuestionListButton = styled.button`
+  background-color: white;
+  color: #5c5c5c;
+  margin: 5px;;
+  min-height: 30px;
+  min-width: 200px;
+  text-align: left;
+
+  &:focus {
+    background-color: white;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: #f8b332;
+    box-shadow: 4px 4px 2px #b5b5b5;
+    border-color: #f8b332;
+    font-size: 104%;
+  }
+
+  &:disabled {
+    color: #1f3d7d;
+    border: 2px solid #1f3d7d;
+    box-shadow: 2px 2px 4px #adadad;
+    font-weight: bold;
+    &:hover {
+      cursor: default;
+      box-shadow: 4px 4px 2px #b5b5b5;
+    }
+  }
+`;
+
+const QuestionListCard = styled(Card)`
+  width: 230px;
+`;
+
+export { OptionButton, NumberStr, QuestionStr, NavButton, Container, QuestionListButton, QuestionListCard }

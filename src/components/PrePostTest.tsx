@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Test from './Test';
 import Results from './Results';
 import styled from 'styled-components';
-import { Container, NavButton } from '../style/preposttest';
+import { NavButton } from '../style/preposttest';
 import {Card, GridRow} from '../style/styled';
 
 /**
@@ -45,9 +45,7 @@ const PrePostTest = ({stage, setStage}: any)=> {
         :
             /** If testComplete is false, [Test] component will be rendered, displaying questions to be answered. Else, results */
             !testComplete?
-                <Container>
-                    <Test testType={stage} setTestComplete={setTestComplete} />
-                </Container>
+                <Test testType={stage} setTestComplete={setTestComplete} />
             :
                 <div>
                     <Card ><Results /></Card>
