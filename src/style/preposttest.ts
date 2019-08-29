@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import React from 'react';
 import { Card } from "./styled";
 
 const Container = styled.div`
@@ -90,11 +91,14 @@ const NavButton = styled.button`
 
 const QuestionListButton = styled.button`
   background-color: white;
-  color: #5c5c5c;
-  margin: 5px;;
+  color: #1f3d7d;
+  font-weight: bold;
+  margin: 5px;
+  border: 0px;
   min-height: 30px;
-  min-width: 200px;
+  min-width: 175px;
   text-align: left;
+  padding-left: 2px;
 
   &:focus {
     background-color: white;
@@ -102,26 +106,37 @@ const QuestionListButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    color: #f8b332;
-    box-shadow: 4px 4px 2px #b5b5b5;
-    border-color: #f8b332;
     font-size: 104%;
   }
 
   &:disabled {
-    color: #1f3d7d;
-    border: 2px solid #1f3d7d;
-    box-shadow: 2px 2px 4px #adadad;
-    font-weight: bold;
+    color: #5c5c5c;
+    font-weight: normal;
     &:hover {
       cursor: default;
-      box-shadow: 4px 4px 2px #b5b5b5;
+      font-size: 100%;
     }
   }
 `;
 
-const QuestionListCard = styled(Card)`
-  width: 230px;
+const QuestionListCard = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+  box-shadow: 0 .25em .5em rgba(0,0,0,.5);
+  border-radius: .5em;
 `;
 
-export { OptionButton, NumberStr, QuestionStr, NavButton, Container, QuestionListButton, QuestionListCard }
+const ListHeading = styled.span`
+  padding: 6px 10px;
+  font-size: 20px;
+  font-weight: bold;
+`;
+
+const Line = styled.hr`
+  border-top: 1px;
+  color: #cccccc;
+`;
+
+export { OptionButton, NumberStr, QuestionStr, NavButton, Container, QuestionListButton, QuestionListCard, ListHeading, Line }
