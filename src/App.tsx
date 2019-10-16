@@ -30,7 +30,7 @@ export default class App extends React.Component<{}, AppProps>{
         } else this.setState({ loggedin: false });
       })
       .catch((err) => alert(err))
-      .finally(() => { this.setState({ tokenChecked: true }) });
+      .finally(() => {  this.setState({ tokenChecked: true }) });
     return true;
   }
 
